@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';  
 import Games from '../api/collections/games.js';  
+const _ = require('underscore');
 import GameList from './GameList.jsx';
 import GameBoard from './GameBoard.jsx';
 import LoginForm from './LoginForm.jsx';
