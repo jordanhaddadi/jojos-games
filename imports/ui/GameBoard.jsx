@@ -18,6 +18,10 @@ export default class GameBoard extends Component {
     handleCellClick(row, col){
         let currentPlayer = this.currentPlayer();
         let game = this.props.game;
+
+        //check for current user
+        if (game.players[currentPlayer].userId !== this.props.user._id) return;  
+
         game.board[row][col] = currentPlayer;
         Games.update(game._id, {
             $set: {board: game.board}

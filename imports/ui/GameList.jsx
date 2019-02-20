@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Games from '../api/collections/games.js';
+const _ = require('underscore');
+
 
 export default class GameList extends Component {
 

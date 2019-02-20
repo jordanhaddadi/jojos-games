@@ -1,8 +1,10 @@
 import { Mongo } from 'meteor/mongo';
+// const _ = require('lodash');
+const _ = require('underscore');
 
-export default Games = new Mongo.Collection('games');
+export default Games = new Mongo.Collection('games')
 
-_.extend(Games, {
+_.extend(Games, { 
 
     newGame() {
         let gameDoc = {
@@ -37,4 +39,4 @@ _.extend(Games, {
             $set: {players: game.players}
         });
     }
-}) 
+}); 
